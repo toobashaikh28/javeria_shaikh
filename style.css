@@ -1,0 +1,193 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+/* Header */
+header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: all 0.3s ease;;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*home*/
+.hero{
+    padding-block: 5.2% ;
+    background: 
+    linear-gradient(rgba(72, 105, 148, 0.954), rgba(0,0,0,0.5)), /* overlay (50% black) */
+    url(./asserts/image.png) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero .container h1{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.hero .container p{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-btns{
+    display: flex;
+    gap: 40px;
+}
+
+.hero-btns .btn{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(124, 155, 181);
+    padding: 8px;
+    border: solid transparent 2px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.hero-btns .btn:hover{
+  cursor: pointer;
+}
+
+.hero .container .highlights{
+    display: flex;
+    gap: 30px;
+    width: 80%;
+}
+
+.hero .container .highlights .highlight-item {
+    text-align: center;
+}
+
+.hero .container .highlights .highlight-item i{
+    font-size: 45px;
+    color: rgb(88, 145, 191);
+}
+
+
+
+
+
+/* Footer */
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+    margin-top: 15px;
+    display: none;
+  }
+  nav.active {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px){
+    .hero .container h1{
+        font-size: 40px;
+    }
+    .hero .container p{
+        font-size: 18px;
+    }
+    .hero .container .highlights{
+        flex-wrap: wrap;
+    }
+    .hero .container .highlights .highlight-item{
+        width: 40%;
+    }
+    .hero-btns{
+        gap: 15px;
+    }
+}

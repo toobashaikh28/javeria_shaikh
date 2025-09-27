@@ -1,0 +1,71 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header & Footer Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="logo">Javaria Shaikh</span></div>
+        <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Javaria Shaikh Ismail</h1>
+            <p>Economist | Researcher | Educator | Policy Analyst</p>
+            <p class="tagline">"Exploring economic challenges through research, teaching, and policy engagement."</p>
+            <div class="hero-btns">
+                <a href="#expertise" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-accent">Contact Me</a>
+            </div>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <p>6+ Years Teaching Experience</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-book"></i>
+                    <p>Published Research in International Journals</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-handshake"></i>
+                    <p>Founder, Dialogues in Economics (DiE)</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-cogs"></i>
+                    <p>Policy & Curriculum Development Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle
+      document.querySelector(".mobile-menu").addEventListener("click", () => {
+        document.querySelector("nav").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
+
