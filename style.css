@@ -288,6 +288,7 @@ nav ul li a.active::after {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-bottom: 5%;
 }
 
 .projects .project-item{
@@ -296,6 +297,127 @@ nav ul li a.active::after {
     gap: 15px;
     color: rgb(44, 62, 80);
 }
+
+
+#research .container h1{
+  text-align: center;
+  padding: 5%;
+}
+
+.pub{
+  display: flex;
+  flex-direction: column;
+  padding: 0 5% 5% 5%;
+  gap: 5vh;
+}
+
+.pub .publication-item{
+  background-color: #f7f9fa;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  border-left: solid #3498db 3px ;
+  border-radius: 0 10px 10px 0;
+}
+
+.pub .publication-item p:first-child{
+  color: rgb(131, 132, 133);
+}
+
+.pub .publication-item p:last-child {
+  color: rgb(83, 84, 84);
+}
+
+#contact .container{
+  padding: 5%;
+}
+
+#contact .container h1{
+  text-align: center;
+}
+
+#contact .contact-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  align-items: center;
+}
+
+.contact-container .contact-info{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-container .contact-item{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-container .contact-item i{
+  font-size: 30px;
+  color: #3498db;
+}
+
+.contact-container .contact-item i:hover{
+  cursor: pointer;
+}
+
+.contact-container .contact-item .fea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-container .contact-form{
+  width: 60%;
+}
+
+.contact-container .contact-form #contactForm{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-container .contact-form #contactForm .form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-container .contact-form #contactForm input{
+  width: 100%;
+  padding: 7px;
+}
+
+.contact-container .contact-form #contactForm textarea{
+  height: 100px;
+  padding: 7px;
+}
+
+.contact-container .contact-form button{
+  width: 150px;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #3498db;
+  border: 1px transparent solid;
+  border-radius: 4px;
+  color: white;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.contact-container .contact-form button:hover{
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+
+
 
 footer {
   background: #f7f9fa;
