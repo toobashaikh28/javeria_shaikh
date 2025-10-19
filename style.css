@@ -339,13 +339,16 @@ nav ul li a.active::after {
 
 #contact .contact-container{
   display: flex;
+  flex-wrap: wrap;
+  gap: 7vh;
   justify-content: space-between;
   margin-top: 5%;
   align-items: center;
 }
 
 .contact-container .contact-info{
-  width: 30%;
+  flex: 0 0 30%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -374,7 +377,8 @@ nav ul li a.active::after {
 }
 
 .contact-container .contact-form{
-  width: 60%;
+  flex: 0 0 60%;
+  min-width: 500px;
 }
 
 .contact-container .contact-form #contactForm{
@@ -387,6 +391,11 @@ nav ul li a.active::after {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.contact-container .contact-form #contactForm .form-group label{
+  font-weight: 600;
+  font-size: large;
 }
 
 .contact-container .contact-form #contactForm input{
@@ -403,6 +412,7 @@ nav ul li a.active::after {
   width: 150px;
   padding: 10px;
   font-weight: 700;
+  font-size: large;
   background-color: #3498db;
   border: 1px transparent solid;
   border-radius: 4px;
