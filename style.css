@@ -298,7 +298,6 @@ nav ul li a.active::after {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-bottom: 5%;
 }
 
 .projects .project-item{
@@ -311,11 +310,11 @@ nav ul li a.active::after {
 
 #research .container h1{
   text-align: center;
-  padding-inline:5% 5% 5%;
+  padding-inline:5%;
 }
 
 #research .container{
-  padding:5%;
+  padding:0% 5% 5% 5%;
 }
 
 .pub{
