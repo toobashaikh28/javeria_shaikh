@@ -548,6 +548,28 @@ footer {
   .social-links {
     margin: 10px 0;
   }
+
+  /* Contact Section Responsive */
+  #contact .contact-container {
+    flex-direction: column;
+    gap: 5vh;
+  }
+  
+  .contact-container .contact-info,
+  .contact-container .contact-form {
+    flex: 0 0 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .contact-container .contact-info {
+    order: 2;
+  }
+  
+  .contact-container .contact-form {
+    order: 1;
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 670px){
@@ -592,4 +614,23 @@ footer {
         width: 95%;
         height: auto;
     }
+
+    .contact-container .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .contact-container .contact-item .fea {
+    align-items: center;
+  }
+  
+  .contact-container .contact-form button {
+    width: 100%;
+  }
+  
+  .contact-container .contact-form #contactForm input,
+  .contact-container .contact-form #contactForm textarea {
+    padding: 10px;
+  }
 }
