@@ -80,7 +80,7 @@ nav ul li a.active::after {
     padding-block: 6% ;
     background: 
     linear-gradient(rgba(72, 105, 148, 0.954), rgba(0,0,0,0.5)), /* overlay (50% black) */
-    url(./asserts/image.png) center/cover no-repeat;
+    url(./assets/image.png) center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,6 +375,10 @@ nav ul li a.active::after {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.contact-item a {
+  color: inherit;        /* uses parent text color */
 }
 
 .contact-container .contact-item i{
