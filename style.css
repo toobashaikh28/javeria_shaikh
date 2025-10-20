@@ -183,7 +183,8 @@ nav ul li a.active::after {
 .aboutme .con{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .aboutme .con img{
@@ -252,6 +253,7 @@ nav ul li a.active::after {
 }
 
 .expert{
+  margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -633,4 +635,9 @@ footer {
   .contact-container .contact-form #contactForm textarea {
     padding: 10px;
   }
+
+  .expertise h1, .projects h1, .container h1{
+    margin-block: 40px;
+  }
+
 }
