@@ -28,13 +28,13 @@
       </div>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero ">
         <div class="container">
             <h1>Javaria Shaikh Ismail</h1>
             <p>Economist | Researcher | Educator | Policy Analyst</p>
             <p class="tagline">"Exploring economic challenges through research, teaching, and policy engagement."</p>
             <div class="hero-btns">
-                <a href="#expertise" class="btn">View My Work</a>
+                <a href="#research" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-accent">Contact Me</a>
             </div>
             <div class="highlights">
@@ -109,7 +109,7 @@
 
     <section>
       <div class="expertise" id="expertise">
-        <h1>Areas of Expertise</h1>
+        <h1 class="underline" >Areas of Expertise</h1>
         <div class="expert">
           <div class="item">
             <i class="fas fa-chart-line"></i>
@@ -139,7 +139,7 @@
         </div>
         <div class="project">
           <div class="projects">
-                <h1 style="text-align: center;">Key Projects</h1>
+                <h1 class="underline" style="text-align: center;">Key Projects</h1>
                 <div class="project-item">
                     <h2>Dialogues in Economics (DiE)</h2>
                     <p>Founded and organized sessions with experts from State Bank of Pakistan (SBP) and Policy Research and Advisory Center (PRAC).</p>
@@ -167,10 +167,10 @@
 
     <section id="research">
         <div class="container">
-            <h1>Research & Publications</h1>
+            <h1 class="underline" >Research & Publications</h1>
             
             <div class="pub">
-              <h2>Published Papers</h2>
+              <h2 class="un">Published Papers</h2>
               <div class="publication-item">
                   <h3>Green Supply Chain Management in Hotels</h3>
                   <p class="publication-meta"><i>International Journal of Services & Operations Management (2023)</i></p>
@@ -208,7 +208,7 @@
 
     <section id="contact">
         <div class="container">
-            <h1>Contact Me</h1>
+            <h1 class="underline" >Contact Me</h1>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -298,12 +298,87 @@
   </footer>
 
 
-    <script>
-      // Mobile menu toggle
-      document.querySelector(".mobile-menu").addEventListener("click", () => {
-        document.querySelector("nav").classList.toggle("active");
+  <script>
+    // Mobile menu toggle
+    document.querySelector(".mobile-menu").addEventListener("click", () => {
+      document.querySelector("nav").classList.toggle("active");
+    });
+
+    // Active navigation highlighting and smooth scrolling
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+      const headerHeight = document.querySelector('header').offsetHeight;
+
+      // Function to update active nav link
+      function updateActiveNav() {
+        let current = '';
+        const scrollPosition = window.scrollY + headerHeight + 100;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            current = sectionId;
+          }
+        });
+
+        // If no section found in viewport, find the closest one
+        if (!current) {
+          let minDistance = Infinity;
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const distance = Math.abs(sectionTop - (window.scrollY + headerHeight));
+            if (distance < minDistance) {
+              minDistance = distance;
+              current = section.getAttribute('id');
+            }
+          });
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      // Update on scroll
+      window.addEventListener('scroll', updateActiveNav);
+      
+      // Update on page load
+      updateActiveNav();
+
+      // Smooth scrolling for nav links
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+          
+          // Close mobile menu after clicking
+          if (window.innerWidth <= 795) {
+            document.querySelector('nav').classList.remove('active');
+          }
+        });
       });
-    </script>
+    });
+  </script>
+
+  
   </body>
 </html>
 
