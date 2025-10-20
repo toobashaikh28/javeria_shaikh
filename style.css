@@ -310,19 +310,18 @@ nav ul li a.active::after {
 
 #research .container h1{
   text-align: center;
-  padding-inline:5%;
+  padding:5% 5% 0 5%;
 }
 
 #research .container{
-  padding:0% 5% 5% 5%;
+  padding-inline: 5%;
 }
 
 .pub{
   display: flex;
   flex-direction: column;
-  padding: 0 5% 5% 5%;
+  padding-bottom:  5%;
   gap: 3vh;
-  margin-bottom: 5%;
 }
 
 .pub .publication-item{
@@ -643,5 +642,9 @@ footer {
   .expertise h1, .projects h1, .container h1{
     margin-block: 40px 30px;
   }
+
+  #contact .contact-info {
+        display: none !important;
+    }
 
 }
